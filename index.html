@@ -1,121 +1,27 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMAPS | Decodificamos el Territorio</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #050608;
-            --accent: #00f2ff;
-            --danger: #ff003c;
-            --glass: rgba(255, 255, 255, 0.03);
-            --border: rgba(0, 242, 255, 0.2);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background: var(--bg); 
-            color: #ffffff; 
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            overflow-x: hidden;
-        }
-
-        /* Hero de Poder */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(rgba(5,6,8,0.7), rgba(5,6,8,1)), url('img/hero-slider-irso.jpg');
-            background-size: cover;
-            background-position: center;
-            border-bottom: 2px solid var(--accent);
-        }
-
-        .hero-content { text-align: center; max-width: 1000px; padding: 20px; }
-        .hero-content h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); line-height: 1.1; margin-bottom: 20px; text-shadow: 0 0 30px var(--accent); text-transform: uppercase; letter-spacing: 2px; }
-        .hero-content p { font-size: 1.3rem; color: #ccc; max-width: 800px; margin: 0 auto; line-height: 1.6; }
-
-        /* Sello de Garantía */
-        .badge-salud {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 15px 30px;
-            border: 2px solid var(--danger);
-            background: rgba(255, 0, 60, 0.1);
-            text-align: center;
-            border-radius: 4px;
-        }
-        .badge-salud h4 { color: var(--danger); font-size: 1.5rem; margin-bottom: 5px; }
-        .badge-salud p { font-size: 0.8rem !important; letter-spacing: 1px; color: white !important; }
-
-        /* Tríada de Datos (3 Columnas) */
-        .triada-container { padding: 100px 8%; background: #08090b; text-align: center; }
-        .triada-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 50px; }
-        .triada-item { padding: 40px; background: var(--glass); border: 1px solid var(--border); border-radius: 8px; transition: 0.4s; }
-        .triada-item:hover { border-color: var(--accent); transform: translateY(-10px); }
-        .triada-item h3 { color: var(--accent); margin-bottom: 15px; text-transform: uppercase; font-size: 1.2rem; }
-        .triada-item p { color: #aaa; font-size: 1rem; line-height: 1.5; }
-
-        /* Secciones de Revelación */
-        .section { padding: 100px 8%; display: flex; align-items: center; gap: 60px; min-height: 80vh; }
-        .section:nth-child(even) { flex-direction: row-reverse; }
-        .img-box { flex: 1.2; }
-        .img-box img { width: 100%; border-radius: 5px; border: 1px solid var(--border); box-shadow: 0 0 40px rgba(0,0,0,0.5); }
-        .text-box { flex: 0.8; }
-        .text-box h2 { font-size: 2.5rem; margin-bottom: 20px; color: white; }
-        .text-box p { font-size: 1.1rem; line-height: 1.8; color: #bbb; }
-
-        /* Formulario Smart */
-        .form-section { padding: 100px 8%; background: #000; text-align: center; }
-        .form-container { max-width: 600px; margin: 50px auto; text-align: left; background: #0a0b0d; padding: 40px; border: 1px solid var(--border); }
-        .form-group { margin-bottom: 25px; }
-        label { display: block; margin-bottom: 10px; color: var(--accent); text-transform: uppercase; font-size: 0.8rem; letter-spacing: 1px; }
-        input, select { width: 100%; padding: 12px; background: #111; border: 1px solid #333; color: white; border-radius: 3px; }
-        .btn-submit { width: 100%; padding: 15px; background: transparent; border: 1px solid var(--accent); color: var(--accent); font-weight: bold; cursor: pointer; transition: 0.4s; text-transform: uppercase; }
-        .btn-submit:hover { background: var(--accent); color: black; box-shadow: 0 0 20px var(--accent); }
-
-        footer { padding: 60px 8%; border-top: 1px solid #111; text-align: center; }
-        .footer-legal { font-size: 0.7rem; color: #444; margin-top: 30px; letter-spacing: 1px; }
-    </style>
-</head>
-<body>
-
-    <section class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Decodificamos el territorio donde otros solo ven mapas.</h1>
-            <p>35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad a nivel manzana.</p>
-            <div class="badge-salud">
-                <h4>99.40%</h4>
-                <p>SALUD METODOLÓGICA AUDITADA</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="triada-container">
-        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">ARQUITECTURA DE SÍNTESIS CIENTÍFICA</h2>
-        <p style="color: #666; margin-bottom: 50px;">El IRSO TOTAL es el resultado de la convergencia de tres capas maestras de datos.</p>
+<section class="triada-container">
+        <span class="tech-pill" style="border-color: var(--danger); color: var(--danger);">METODOLOGÍA CIENTÍFICAMENTE COMPROBABLE</span>
+        <h2 style="font-size: 2.8rem; margin-bottom: 20px; letter-spacing: -1px;">ARQUITECTURA DE SÍNTESIS CIENTÍFICA</h2>
+        <p style="color: #888; max-width: 800px; margin: 0 auto 60px auto; font-size: 1.1rem;">
+            El IRSO (Índice de Riesgo Seccional) no es una estimación; es un modelo matemático ponderado que elimina la subjetividad de la percepción delictiva. A través de un análisis de <strong>Natural Breaks (Jenks)</strong>, identificamos los puntos de quiebre donde la vulnerabilidad social se convierte en riesgo operativo.
+        </p>
+        
         <div class="triada-grid">
-            <div class="triada-item" data-aos="fade-up" data-aos-delay="100">
-                <h3>IRSO Municipal (Seguridad)</h3>
-                <p>La tendencia del entorno: Incidencia delictiva ponderada por gravedad basada en el Secretariado Ejecutivo.</p>
+            <div class="triada-item" data-aos="fade-up">
+                <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 10px;">VARIABLE SEGURIDAD</div>
+                <h3>IRSO Municipal</h3>
+                <p><strong>La Tendencia del Entorno:</strong> Extracción y ponderación de la incidencia delictiva del Secretariado Ejecutivo. No medimos volumen, medimos <strong>Gravedad Específica</strong> para entender cómo la criminalidad macro condiciona el territorio.</p>
             </div>
+
             <div class="triada-item" data-aos="fade-up" data-aos-delay="200">
-                <h3>IRSO Manzana (Entorno)</h3>
-                <p>La realidad micro: Densidad poblacional y vulnerabilidad sociodemográfica extraída directamente del Censo INEGI.</p>
+                <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 10px;">VARIABLE DEMOGRÁFICA</div>
+                <h3>IRSO Manzana</h3>
+                <p><strong>La Realidad Micro:</strong> Auditoría de la densidad poblacional y carencias socioeconómicas mediante datos censales de INEGI. Es la <strong>Huella Digital</strong> del vecino, el análisis micro-territorial que revela la exposición real al riesgo.</p>
             </div>
-            <div class="triada-item" data-aos="fade-up" data-aos-delay="300">
-                <h3>IRSO Seccional (La Joya)</h3>
-                <p>La síntesis final: Integración de gobernabilidad y comportamiento electoral para identificar el Silencio Operativo.</p>
+
+            <div class="triada-item" data-aos="fade-up" data-aos-delay="400">
+                <div style="font-size: 0.8rem; color: var(--accent); margin-bottom: 10px;">VARIABLE GOBERNABILIDAD</div>
+                <h3>IRSO Seccional</h3>
+                <p><strong>La Síntesis Final:</strong> La integración de la gobernabilidad mediante el comportamiento electoral. Identificamos el <strong>Silencio Operativo</strong>: zonas donde el alto abstencionismo y la delincuencia revelan un control fáctico invisible para mapas comunes.</p>
             </div>
         </div>
     </section>
-
-    <section class="section">
-        <div class="img-box" data-aos="fade-right">
-            <img src="img/irso-municipal-tendencia.jpg" alt="Tendencia Municipal">
-        </div>
-        <div class="text-box" data-aos="fade-left">
-            <h2>01. Intelig
