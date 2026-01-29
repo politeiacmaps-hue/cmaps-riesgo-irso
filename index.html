@@ -19,7 +19,6 @@
         }
 
         .border-glow { border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 0 15px rgba(0, 242, 255, 0.1); }
-        .border-glow:hover { border-color: var(--accent); box-shadow: 0 0 30px rgba(0, 242, 255, 0.4); transition: 0.5s; }
         
         .text-gradient {
             background: linear-gradient(to right, #fff, var(--accent));
@@ -32,14 +31,16 @@
             100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
         }
         
-        /* FIX CRÍTICO: Asegura que el botón sea clicleable */
-        .btn-contacto { 
+        /* BOTÓN TOTALMENTE LIBRE DE INTERFERENCIAS */
+        .btn-final { 
             animation: pulse-cyan 2s infinite; 
             display: block !important;
             position: relative !important;
-            z-index: 999 !important; /* Por encima de todo */
+            z-index: 9999 !important; 
             cursor: pointer !important;
+            background-color: #0891b2 !important; /* Cyan 600 */
         }
+        .btn-final:hover { background-color: #22d3ee !important; }
 
         .joya-section {
             background: linear-gradient(45deg, #0a0c10 0%, #11141a 100%);
@@ -51,74 +52,55 @@
 
     <header class="hero-luxury h-screen flex items-center justify-center text-center px-6">
         <div data-aos="fade-up" class="max-w-6xl">
-            <div class="mb-6 inline-block px-4 py-1 border border-cyan-500 text-cyan-500 text-[10px] tracking-[0.4em] uppercase font-bold text-white bg-cyan-500/10">
-                Exclusivo de Politeia & CMAPS
-            </div>
-            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient uppercase">
-                Decodificamos el territorio <br>
-                <span class="text-2xl md:text-4xl font-light">donde otros solo ven mapas</span>
-            </h1>
-            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-4xl mx-auto leading-relaxed font-light">
-                Presentamos el <strong>Índice IRSO</strong>: La arquitectura de síntesis geográfica más robusta del mercado, creada y validada por <strong>CMAPS</strong>.
-            </p>
-            <div class="border-l-4 border-red-600 pl-6 text-left inline-block">
-                <span class="block text-4xl font-bold text-red-500">99.40%</span>
-                <span class="text-[10px] uppercase tracking-widest text-white font-bold">Salud Metodológica Auditada</span>
-            </div>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient uppercase">Decodificamos el territorio</h1>
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-4xl mx-auto">Presentamos el <strong>Índice IRSO</strong> de <strong>CMAPS</strong>.</p>
         </div>
     </header>
 
     <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-            <div data-aos="fade-right">
-                <h3 class="text-3xl md:text-4xl font-bold mb-6 italic uppercase">¿Por qué el IRSO es Infalible?</h3>
-                <p class="text-slate-400 mb-6 leading-relaxed text-justify">
-                    Basado en el rigor científico: "Hacer, Comprobar que Funcione, y Luego Avanzar". El IRSO no es un parche, es una metodología robusta de inteligencia territorial.
-                </p>
-                <ul class="space-y-4 text-sm text-slate-300">
-                    <li class="flex items-center gap-3"><span class="text-cyan-500 font-bold text-xl">✔</span> Fusión de capas Censales, Electorales y Delictivas.</li>
-                    <li class="flex items-center gap-3"><span class="text-cyan-500 font-bold text-xl">✔</span> Algoritmo de ponderación de vulnerabilidad real.</li>
-                </ul>
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-up">
+            <div>
+                <h3 class="text-3xl font-bold mb-6 italic uppercase underline decoration-cyan-500">¿Por qué el IRSO?</h3>
+                <p class="text-slate-400 leading-relaxed text-justify">Rigor científico y metodología robusta: "Hacer, Comprobar que Funcione, y Luego Avanzar".</p>
             </div>
-            <div data-aos="fade-left">
-                <img src="irso-municipal-tendencia.jpg" class="rounded-lg border-glow w-full" alt="CMAPS Municipal">
-            </div>
+            <img src="irso-municipal-tendencia.jpg" class="rounded-lg border-glow w-full">
         </div>
 
-        <div class="joya-section p-8 md:p-20 rounded-3xl text-center mb-32 border border-cyan-500/20 shadow-2xl" data-aos="zoom-in">
-            <h3 class="text-4xl md:text-6xl font-bold mb-8 uppercase italic">IRSO Seccional</h3>
-            <div class="max-w-5xl mx-auto mb-12">
-                <img src="irso-seccional-joya.jpg" class="w-full rounded-xl shadow-2xl border border-cyan-500/30" alt="La Joya de la Corona CMAPS">
-            </div>
+        <div class="joya-section p-8 md:p-20 rounded-3xl text-center mb-32" data-aos="zoom-in">
+            <h3 class="text-4xl font-bold mb-8 uppercase italic">IRSO Seccional</h3>
+            <img src="irso-seccional-joya.jpg" class="w-full rounded-xl shadow-2xl border border-cyan-500/30">
         </div>
     </section>
 
-    <section class="bg-black py-24 border-t border-slate-900">
+    <section class="bg-black py-24 border-t border-slate-900 relative z-50">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl md:text-4xl font-bold mb-12 uppercase tracking-widest text-white italic">Iniciar Consultoría CMAPS</h2>
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-cyan-500/20 text-left shadow-2xl relative">
-                
-                <p class="text-slate-300 text-sm mb-10 text-center">
-                    Haga clic en el botón para establecer conexión directa vía correo electrónico.
+            
+            <div class="bg-slate-900/60 p-10 rounded-2xl border border-cyan-500/20 text-left shadow-2xl">
+                <p class="text-slate-300 text-sm mb-10 text-center font-bold uppercase tracking-widest">
+                    Conexión Directa con el Equipo de Inteligencia
                 </p>
                 
-                <a href="mailto:politeiacmaps@gmail.com?subject=Consulta de Inteligencia IRSO - CMAPS&body=Hola Equipo CMAPS, deseo solicitar una consultoría estratégica basada en el Índice IRSO." 
-                   class="btn-contacto w-full bg-cyan-600 hover:bg-cyan-400 text-black font-extrabold py-6 rounded text-center transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
+                <a href="mailto:politeiacmaps@gmail.com?subject=Consulta IRSO&body=Deseo informes." 
+                   class="btn-final w-full text-black font-extrabold py-6 rounded text-center transition-all duration-300 uppercase tracking-widest text-sm">
                     Establecer Conexión Directa
                 </a>
                 
                 <p class="mt-8 text-[13px] text-center text-cyan-400 font-bold uppercase tracking-[0.2em]">
-                    Canal oficial: <span class="text-white ml-2 underline">politeiacmaps@gmail.com</span>
+                    Canal oficial: <span class="text-white underline">politeiacmaps@gmail.com</span>
                 </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-16 text-center border-t border-white/5 px-6 bg-[#050608]">
+    <footer class="py-16 text-center border-t border-white/5 bg-[#050608]">
         <h4 class="text-xl font-bold text-white tracking-[0.3em] uppercase">CMAPS | POLITEIA</h4>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>AOS.init({ duration: 1000, once: true });</script>
+    <script>
+        // Inicializar animaciones, pero aseguramos que no rompan el flujo
+        AOS.init({ duration: 1000, once: true, disable: 'mobile' });
+    </script>
 </body>
 </html>
