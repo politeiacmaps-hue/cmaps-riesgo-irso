@@ -3,167 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMAPS | Inteligencia Territorial IRSO</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <title>CMAPS | Inteligencia de Riesgo IRSO</title>
     <style>
-        /* ESTILOS DE AUTORIDAD - DARK MODE PROFESIONAL */
-        :root {
-            --bg: #050608;
-            --accent: #00f2ff;
-            --danger: #ff003c;
-            --card-bg: #0d0f12;
-            --border: rgba(0, 242, 255, 0.2);
-        }
-
+        /* RESET Y BASE DE PODER */
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        
         body { 
-            background-color: var(--bg); 
+            background-color: #050608; 
             color: #ffffff; 
-            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+            font-family: 'Arial', sans-serif; 
             line-height: 1.6;
-            overflow-x: hidden;
         }
 
-        /* HERO SECTION - IMPACTO INICIAL */
+        /* HERO: DECODIFICAMOS EL TERRITORIO */
         .hero {
             height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            width: 100%;
             background: linear-gradient(rgba(5,6,8,0.7), rgba(5,6,8,1)), url('hero-slider-irso.jpg');
             background-size: cover;
             background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-            border-bottom: 2px solid var(--accent);
+            padding: 20px;
+            border-bottom: 2px solid #00f2ff;
         }
 
-        .hero-content { max-width: 900px; padding: 40px; }
-        .hero-content h1 { font-size: clamp(2rem, 8vw, 4rem); text-transform: uppercase; letter-spacing: 4px; margin-bottom: 20px; text-shadow: 0 0 20px var(--accent); }
-        .hero-content p { font-size: 1.2rem; color: #aaa; margin-bottom: 30px; }
+        .hero h1 { font-size: 3.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; color: #fff; text-shadow: 0 0 20px #00f2ff; }
+        .hero p { font-size: 1.2rem; color: #ccc; max-width: 900px; margin-bottom: 30px; }
 
-        .badge-salud {
-            display: inline-block;
-            border: 1px solid var(--danger);
+        .sello-salud {
+            border: 2px solid #ff003c;
             padding: 15px 30px;
-            background: rgba(255, 0, 60, 0.05);
-            border-radius: 4px;
+            background: rgba(255, 0, 60, 0.1);
+            color: #ff003c;
+            font-weight: bold;
+            font-size: 1.5rem;
         }
-        .badge-salud h4 { color: var(--danger); font-size: 1.8rem; }
 
-        /* SECCIONES DE CONTENIDO */
-        .container { max-width: 1200px; margin: 0 auto; padding: 100px 20px; }
-        
-        .section-header { text-align: center; margin-bottom: 60px; }
-        .section-header h2 { font-size: 2.5rem; color: var(--accent); text-transform: uppercase; margin-bottom: 20px; }
+        /* CONTENEDOR PRINCIPAL */
+        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
 
-        /* GRID DE LA TRÍADA */
+        /* LA TRÍADA: 3 COLUMNAS CIENTÍFICAS */
+        .triada-section { text-align: center; margin-bottom: 100px; }
         .triada-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 30px;
-            margin-top: 40px;
+            margin-top: 50px;
         }
-
         .card {
-            background: var(--card-bg);
-            padding: 40px;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            transition: 0.3s;
+            background: #0d0f12;
+            padding: 30px;
+            border: 1px solid rgba(0, 242, 255, 0.2);
+            text-align: left;
         }
-        .card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .card h3 { color: var(--accent); margin-bottom: 15px; font-size: 1.3rem; }
-        .card p { color: #888; font-size: 0.95rem; }
+        .card h3 { color: #00f2ff; margin-bottom: 15px; text-transform: uppercase; }
+        .card p { color: #aaa; font-size: 0.9rem; }
 
-        /* BLOQUES DE IMAGEN + TEXTO (METODOLOGÍA) */
-        .flex-row {
+        /* FILAS DE METODOLOGÍA (FOTOS + TEXTO) */
+        .row {
             display: flex;
             align-items: center;
-            gap: 50px;
             margin-bottom: 120px;
+            gap: 50px;
             flex-wrap: wrap;
         }
-        .flex-row:nth-child(even) { flex-direction: row-reverse; }
+        .row:nth-child(even) { flex-direction: row-reverse; }
+        .img-container { flex: 1.2; min-width: 300px; }
+        .img-container img { width: 100%; border: 1px solid #222; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
+        .text-container { flex: 0.8; min-width: 300px; }
+        .text-container h2 { font-size: 2rem; color: #fff; margin-bottom: 20px; border-left: 4px solid #00f2ff; padding-left: 15px; }
+        .text-container p { color: #bbb; }
 
-        .img-box { flex: 1; min-width: 300px; }
-        .img-box img { width: 100%; border: 1px solid var(--border); border-radius: 4px; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
-
-        .text-box { flex: 1; min-width: 300px; }
-        .text-box h2 { font-size: 2.2rem; margin-bottom: 20px; }
-        .text-box p { color: #aaa; margin-bottom: 20px; }
-
-        /* FORMULARIO */
-        .form-box {
-            background: var(--card-bg);
-            padding: 50px;
-            border: 1px solid var(--border);
+        /* FORMULARIO SMART */
+        .form-container {
+            background: #0d0f12;
+            padding: 60px;
+            border: 1px solid #00f2ff;
             max-width: 700px;
             margin: 0 auto;
         }
         .form-group { margin-bottom: 20px; }
-        label { display: block; color: var(--accent); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 8px; }
-        input, select { width: 100%; padding: 12px; background: #1a1c20; border: 1px solid #333; color: white; }
-        .btn-submit { 
-            width: 100%; padding: 15px; background: transparent; border: 1px solid var(--accent); 
-            color: var(--accent); font-weight: bold; cursor: pointer; text-transform: uppercase;
+        label { display: block; color: #00f2ff; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
+        input, select { width: 100%; padding: 12px; background: #1a1c20; border: 1px solid #333; color: #fff; }
+        button {
+            width: 100%;
+            padding: 15px;
+            background: transparent;
+            border: 2px solid #00f2ff;
+            color: #00f2ff;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: 0.3s;
         }
-        .btn-submit:hover { background: var(--accent); color: black; box-shadow: 0 0 20px var(--accent); }
+        button:hover { background: #00f2ff; color: #000; }
 
-        footer { text-align: center; padding: 60px; border-top: 1px solid #111; color: #444; font-size: 0.8rem; }
+        /* FOOTER LEGAL */
+        footer {
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 1px solid #111;
+            color: #444;
+            font-size: 0.8rem;
+        }
     </style>
 </head>
 <body>
 
-    <section class="hero">
-        <div class="hero-content" data-aos="fade-up">
-            <h1>Decodificamos el territorio donde otros solo ven mapas.</h1>
-            <p>35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad a nivel manzana.</p>
-            <div class="badge-salud">
-                <h4>99.40%</h4>
-                <p>SALUD METODOLÓGICA AUDITADA</p>
-            </div>
-        </div>
-    </section>
+    <header class="hero">
+        <h1>Decodificamos el territorio donde otros solo ven mapas.</h1>
+        <p>35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad a nivel manzana.</p>
+        <div class="sello-salud">99.40% SALUD METODOLÓGICA</div>
+    </header>
 
     <div class="container">
-        <div class="section-header">
-            <h2>Arquitectura de Síntesis Científica</h2>
+        
+        <section class="triada-section">
+            <h2 style="font-size: 2.5rem;">Arquitectura de Síntesis Científica</h2>
             <p style="color: #666;">El IRSO TOTAL es el resultado de la convergencia de tres capas maestras de datos.</p>
+            <div class="triada-grid">
+                <div class="card">
+                    <h3>IRSO Municipal (Seguridad)</h3>
+                    <p>La tendencia del entorno: Incidencia delictiva ponderada por gravedad basada en el Secretariado Ejecutivo.</p>
+                </div>
+                <div class="card">
+                    <h3>IRSO Manzana (Entorno)</h3>
+                    <p>La realidad micro: Densidad poblacional y vulnerabilidad sociodemográfica extraída directamente del Censo INEGI.</p>
+                </div>
+                <div class="card">
+                    <h3>IRSO Seccional (La Joya)</h3>
+                    <p>La síntesis final: Integración de gobernabilidad y comportamiento electoral para identificar el Silencio Operativo.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="row">
+            <div class="img-container">
+                <img src="irso-municipal-tendencia.jpg" alt="Municipal">
+            </div>
+            <div class="text-container">
+                <h2>01. Inteligencia Municipal</h2>
+                <p>Analizamos la presión delictiva del entorno macro. El IRSO Municipal establece la base de seguridad regional que condiciona toda la operatividad territorial.</p>
+            </div>
         </div>
 
-        <div class="triada-grid">
-            <div class="card" data-aos="fade-up">
-                <h3>IRSO Municipal (Seguridad)</h3>
-                <p>La tendencia del entorno: Incidencia delictiva ponderada por gravedad basada en el Secretariado Ejecutivo.</p>
+        <div class="row">
+            <div class="img-container">
+                <img src="irso-manzana-micro.jpg" alt="Manzana">
             </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="200">
-                <h3>IRSO Manzana (Entorno)</h3>
-                <p>La realidad micro: Densidad poblacional y vulnerabilidad sociodemográfica extraída directamente del Censo INEGI.</p>
-            </div>
-            <div class="card" data-aos="fade-up" data-aos-delay="400">
-                <h3>IRSO Seccional (La Joya)</h3>
-                <p>La síntesis final: Integración de gobernabilidad y comportamiento electoral para identificar el Silencio Operativo.</p>
+            <div class="text-container">
+                <h2>02. Auditoría de Manzana</h2>
+                <p>Precisión quirúrgica calle por calle. Revelamos la huella digital del territorio para entender la exposición real al riesgo en el nivel más micro.</p>
             </div>
         </div>
 
-        <div style="margin-top: 150px;">
-            <div class="flex-row">
-                <div class="img-box" data-aos="fade-right">
-                    <img src="irso-municipal-tendencia.jpg" alt="IRSO Municipal">
-                </div>
-                <div class="text-box" data-aos="fade-left">
-                    <h2>01. Inteligencia Municipal</h2>
-                    <p>Analizamos la incidencia delictiva del entorno macro. El IRSO Municipal establece la línea base de seguridad regional que condiciona toda la operatividad territorial.</p>
-                </div>
+        <div class="row">
+            <div class="img-container">
+                <img src="irso-electoral-abstencionismo.jpg" alt="Electoral">
             </div>
+            <div class="text-container">
+                <h2>03. Silencio Electoral</h2>
+                <p>El comportamiento ciudadano es el espejo de la gobernabilidad. El abstencionismo en zonas críticas revela vacíos de poder invisibles para la cartografía convencional.</p>
+            </div>
+        </div>
 
-            <div class="flex-row">
-                <div class="img-box" data-aos="fade-left">
-                    <img src="irso-manzana-micro.jpg" alt="IRSO Manzana">
-                </div>
-                <div class="text-box" data-aos="fade-right">
-                    <h2>02. Auditoría de Manzana</h2>
-                    <p>Donde vive el riesgo, vive el dato. Visualizamos la vulnerabilidad sociodemográfica con precisión quirúrgica, permitiendo una lectura real del entorno inmediato calle por calle.</p>
-                </div>
+        <div class="row">
+            <div class="img-container">
+                <img src="irso-seccional-joya.jpg" alt="Total">
             </div>
+            <div class="text-container">
+                <h2>Verdad Operativa Seccional</h2>
+                <p>La síntesis definitiva: El IRSO CMAPS integra demografía, delincuencia y voluntad política para identificar clústeres de riesgo reales y comprobables.</p>
+            </div>
+        </div>
+
+        <section style="text-align: center; margin-top: 50px;">
+            <h2 style="color: #00f2ff; margin-bottom: 40px;">SOLICITAR AUDITORÍA DE ZONA</h2>
+            <div class="form-container">
+                <form>
+                    <div class="form-group">
+                        <label>Firma / Organización</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Prioridad Operativa</label>
+                        <select>
+                            <option>Seguridad de Activos / K&R</option>
+                            <option>Logística y Última Milla</option>
+                            <option>Expansión Inmobiliaria</option>
+                            <option>Estrategia Política / Electoral</option>
+                        </select>
+                    </div>
+                    <button type="submit">Iniciar Consultoría de Datos</button>
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>CMAPS &copy; 2026 | Sede Ciudad de México</p>
+        <p style="margin-top: 10px; opacity: 0.4;">CMAPS es una firma independiente de inteligencia cartográfica. Prohibida la reproducción parcial o total del modelo IRSO sin autorización. Modelo validado en 6,706 secciones del Estado de México.</p>
+    </footer>
+
+</body>
+</html>
