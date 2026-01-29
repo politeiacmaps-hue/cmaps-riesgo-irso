@@ -3,211 +3,248 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMAPS | Inteligencia de Riesgo IRSO</title>
+    <title>CMAPS | Inteligencia Territorial IRSO</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <style>
-        /* RESET Y BASE DE PODER */
+        :root {
+            --bg: #050608;
+            --accent: #00f2ff;
+            --danger: #ff003c;
+            --glass: rgba(255, 255, 255, 0.03);
+            --border: rgba(0, 242, 255, 0.2);
+        }
+
         * { margin: 0; padding: 0; box-sizing: border-box; }
+        
         body { 
-            background-color: #050608; 
+            background-color: var(--bg); 
             color: #ffffff; 
-            font-family: 'Arial', sans-serif; 
+            font-family: 'Segoe UI', Roboto, Helvetica, sans-serif;
+            overflow-x: hidden;
             line-height: 1.6;
         }
 
-        /* HERO: DECODIFICAMOS EL TERRITORIO */
+        /* HERO - RESPONSIVO */
         .hero {
             height: 100vh;
-            width: 100%;
-            background: linear-gradient(rgba(5,6,8,0.7), rgba(5,6,8,1)), url('hero-slider-irso.jpg');
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(rgba(5,6,8,0.7), rgba(5,6,8,1)), url('./hero-slider-irso.jpg');
             background-size: cover;
             background-position: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
             padding: 20px;
-            border-bottom: 2px solid #00f2ff;
+            border-bottom: 2px solid var(--accent);
         }
 
-        .hero h1 { font-size: 3.5rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 20px; color: #fff; text-shadow: 0 0 20px #00f2ff; }
-        .hero p { font-size: 1.2rem; color: #ccc; max-width: 900px; margin-bottom: 30px; }
+        .hero-content h1 { 
+            font-size: clamp(2rem, 8vw, 4.5rem); 
+            text-transform: uppercase; 
+            margin-bottom: 20px; 
+            text-shadow: 0 0 30px var(--accent);
+        }
+
+        .hero-content p { font-size: clamp(1rem, 3vw, 1.3rem); color: #ccc; max-width: 900px; margin: 0 auto; }
 
         .sello-salud {
-            border: 2px solid #ff003c;
+            display: inline-block;
+            margin-top: 30px;
             padding: 15px 30px;
+            border: 2px solid var(--danger);
             background: rgba(255, 0, 60, 0.1);
-            color: #ff003c;
-            font-weight: bold;
-            font-size: 1.5rem;
+            border-radius: 4px;
         }
 
-        /* CONTENEDOR PRINCIPAL */
-        .container { max-width: 1100px; margin: 0 auto; padding: 80px 20px; }
+        /* CONTENEDOR FLEXIBLE */
+        .container { max-width: 1200px; margin: 0 auto; padding: 60px 20px; }
 
-        /* LA TRÍADA: 3 COLUMNAS CIENTÍFICAS */
-        .triada-section { text-align: center; margin-bottom: 100px; }
+        /* TRÍADA DE DATOS */
         .triada-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 50px;
+            gap: 25px;
+            margin: 60px 0;
         }
-        .card {
-            background: #0d0f12;
-            padding: 30px;
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            text-align: left;
-        }
-        .card h3 { color: #00f2ff; margin-bottom: 15px; text-transform: uppercase; }
-        .card p { color: #aaa; font-size: 0.9rem; }
 
-        /* FILAS DE METODOLOGÍA (FOTOS + TEXTO) */
+        .card {
+            background: var(--glass);
+            padding: 40px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            transition: 0.4s;
+        }
+        .card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(0, 242, 255, 0.05); }
+        .card h3 { color: var(--accent); margin-bottom: 15px; text-transform: uppercase; }
+
+        /* SECCIONES ALTERNADAS (MOBILE FRIENDLY) */
         .row {
             display: flex;
             align-items: center;
-            margin-bottom: 120px;
             gap: 50px;
-            flex-wrap: wrap;
+            margin-bottom: 100px;
+            flex-wrap: wrap; /* Esto hace que en celular se ponga uno abajo del otro */
         }
         .row:nth-child(even) { flex-direction: row-reverse; }
-        .img-container { flex: 1.2; min-width: 300px; }
-        .img-container img { width: 100%; border: 1px solid #222; box-shadow: 0 0 30px rgba(0,0,0,0.5); }
-        .text-container { flex: 0.8; min-width: 300px; }
-        .text-container h2 { font-size: 2rem; color: #fff; margin-bottom: 20px; border-left: 4px solid #00f2ff; padding-left: 15px; }
-        .text-container p { color: #bbb; }
 
-        /* FORMULARIO SMART */
-        .form-container {
-            background: #0d0f12;
-            padding: 60px;
-            border: 1px solid #00f2ff;
-            max-width: 700px;
-            margin: 0 auto;
+        .img-box { flex: 1; min-width: 320px; }
+        .img-box img { 
+            width: 100%; 
+            border-radius: 8px; 
+            border: 1px solid var(--border); 
+            box-shadow: 0 0 40px rgba(0,0,0,0.6);
+            transition: 0.5s;
         }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; color: #00f2ff; font-size: 0.8rem; margin-bottom: 10px; text-transform: uppercase; }
-        input, select { width: 100%; padding: 12px; background: #1a1c20; border: 1px solid #333; color: #fff; }
-        button {
-            width: 100%;
-            padding: 15px;
-            background: transparent;
-            border: 2px solid #00f2ff;
-            color: #00f2ff;
-            font-weight: bold;
-            cursor: pointer;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        button:hover { background: #00f2ff; color: #000; }
+        .img-box:hover img { border-color: var(--accent); transform: scale(1.02); }
 
-        /* FOOTER LEGAL */
-        footer {
+        .text-box { flex: 1; min-width: 320px; }
+        .text-box h2 { font-size: 2.5rem; color: #fff; margin-bottom: 20px; border-left: 5px solid var(--accent); padding-left: 20px; }
+
+        /* FORMULARIO Y CONTACTO */
+        .contact-section {
+            background: #000;
+            padding: 100px 20px;
             text-align: center;
-            padding: 80px 20px;
-            border-top: 1px solid #111;
-            color: #444;
-            font-size: 0.8rem;
         }
+
+        .form-container {
+            max-width: 650px;
+            margin: 50px auto;
+            background: #0d0f12;
+            padding: 40px;
+            border: 1px solid var(--accent);
+            text-align: left;
+        }
+
+        .form-group { margin-bottom: 20px; }
+        label { display: block; color: var(--accent); text-transform: uppercase; font-size: 0.8rem; margin-bottom: 10px; }
+        input, select { 
+            width: 100%; 
+            padding: 15px; 
+            background: #1a1c20; 
+            border: 1px solid #333; 
+            color: #fff;
+            border-radius: 4px;
+        }
+
+        .btn-mail {
+            display: block;
+            width: 100%;
+            padding: 20px;
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.4s;
+            cursor: pointer;
+        }
+
+        .btn-mail:hover { background: var(--accent); color: #000; box-shadow: 0 0 30px var(--accent); }
+
+        footer { padding: 60px 20px; border-top: 1px solid #111; text-align: center; color: #444; font-size: 0.8rem; }
     </style>
 </head>
 <body>
 
-    <header class="hero">
-        <h1>Decodificamos el territorio donde otros solo ven mapas.</h1>
-        <p>35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad a nivel manzana.</p>
-        <div class="sello-salud">99.40% SALUD METODOLÓGICA</div>
-    </header>
+    <section class="hero">
+        <div class="hero-content" data-aos="zoom-out">
+            <h1>Decodificamos el territorio donde otros solo ven mapas.</h1>
+            <p>35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad a nivel manzana.</p>
+            <div class="sello-salud">
+                <h4 style="color:var(--danger); font-size: 2rem;">99.40%</h4>
+                <p style="font-size: 0.8rem; letter-spacing: 2px;">SALUD METODOLÓGICA AUDITADA</p>
+            </div>
+        </div>
+    </section>
 
     <div class="container">
-        
-        <section class="triada-section">
-            <h2 style="font-size: 2.5rem;">Arquitectura de Síntesis Científica</h2>
-            <p style="color: #666;">El IRSO TOTAL es el resultado de la convergencia de tres capas maestras de datos.</p>
-            <div class="triada-grid">
-                <div class="card">
-                    <h3>IRSO Municipal (Seguridad)</h3>
-                    <p>La tendencia del entorno: Incidencia delictiva ponderada por gravedad basada en el Secretariado Ejecutivo.</p>
-                </div>
-                <div class="card">
-                    <h3>IRSO Manzana (Entorno)</h3>
-                    <p>La realidad micro: Densidad poblacional y vulnerabilidad sociodemográfica extraída directamente del Censo INEGI.</p>
-                </div>
-                <div class="card">
-                    <h3>IRSO Seccional (La Joya)</h3>
-                    <p>La síntesis final: Integración de gobernabilidad y comportamiento electoral para identificar el Silencio Operativo.</p>
-                </div>
+        <div class="triada-grid">
+            <div class="card" data-aos="fade-up">
+                <h3>IRSO Municipal</h3>
+                <p>Incidencia delictiva ponderada por gravedad. Analizamos la presión macro-territorial que condiciona la seguridad.</p>
             </div>
-        </section>
+            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                <h3>IRSO Manzana</h3>
+                <p>Realidad micro: Censo INEGI aplicado a la identificación de vulnerabilidades sociodemográficas calle por calle.</p>
+            </div>
+            <div class="card" data-aos="fade-up" data-aos-delay="400">
+                <h3>IRSO Seccional</h3>
+                <p>La síntesis final: Silencio Operativo identificado a través del comportamiento electoral y la gobernabilidad.</p>
+            </div>
+        </div>
 
         <div class="row">
-            <div class="img-container">
-                <img src="irso-municipal-tendencia.jpg" alt="Municipal">
+            <div class="img-box" data-aos="fade-right">
+                <img src="./irso-municipal-tendencia.jpg" alt="Municipal">
             </div>
-            <div class="text-container">
+            <div class="text-box" data-aos="fade-left">
                 <h2>01. Inteligencia Municipal</h2>
-                <p>Analizamos la presión delictiva del entorno macro. El IRSO Municipal establece la base de seguridad regional que condiciona toda la operatividad territorial.</p>
+                <p>Establecemos la base de seguridad regional. El IRSO Municipal proyecta la tendencia del entorno para anticipar riesgos sistémicos.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="img-container">
-                <img src="irso-manzana-micro.jpg" alt="Manzana">
+            <div class="img-box" data-aos="fade-left">
+                <img src="./irso-manzana-micro.jpg" alt="Manzana">
             </div>
-            <div class="text-container">
+            <div class="text-box" data-aos="fade-right">
                 <h2>02. Auditoría de Manzana</h2>
-                <p>Precisión quirúrgica calle por calle. Revelamos la huella digital del territorio para entender la exposición real al riesgo en el nivel más micro.</p>
+                <p>Nuestra capacidad micro permite identificar la "huella digital" del riesgo demográfico, esencial para operaciones que requieren precisión absoluta.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="img-container">
-                <img src="irso-electoral-abstencionismo.jpg" alt="Electoral">
+            <div class="img-box" data-aos="fade-right">
+                <img src="./irso-electoral-abstencionismo.jpg" alt="Electoral">
             </div>
             <div class="text-container">
                 <h2>03. Silencio Electoral</h2>
-                <p>El comportamiento ciudadano es el espejo de la gobernabilidad. El abstencionismo en zonas críticas revela vacíos de poder invisibles para la cartografía convencional.</p>
+                <p>El abstencionismo revela vacíos de poder. CMAPS decodifica el comportamiento ciudadano para predecir zonas de posible control fáctico.</p>
             </div>
         </div>
 
         <div class="row">
-            <div class="img-container">
-                <img src="irso-seccional-joya.jpg" alt="Total">
+            <div class="img-box" data-aos="zoom-in">
+                <img src="./irso-seccional-joya.jpg" alt="IRSO Total">
             </div>
-            <div class="text-container">
-                <h2>Verdad Operativa Seccional</h2>
-                <p>La síntesis definitiva: El IRSO CMAPS integra demografía, delincuencia y voluntad política para identificar clústeres de riesgo reales y comprobables.</p>
+            <div class="text-box">
+                <h2>La Verdad Operativa</h2>
+                <p>El IRSO SECCIONAL es la fusión robusta de todas nuestras capas de inteligencia. La herramienta definitiva para la toma de decisiones críticas.</p>
             </div>
         </div>
-
-        <section style="text-align: center; margin-top: 50px;">
-            <h2 style="color: #00f2ff; margin-bottom: 40px;">SOLICITAR AUDITORÍA DE ZONA</h2>
-            <div class="form-container">
-                <form>
-                    <div class="form-group">
-                        <label>Firma / Organización</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>Prioridad Operativa</label>
-                        <select>
-                            <option>Seguridad de Activos / K&R</option>
-                            <option>Logística y Última Milla</option>
-                            <option>Expansión Inmobiliaria</option>
-                            <option>Estrategia Política / Electoral</option>
-                        </select>
-                    </div>
-                    <button type="submit">Iniciar Consultoría de Datos</button>
-                </form>
-            </div>
-        </section>
-
     </div>
 
+    <section class="contact-section">
+        <h2 style="color: var(--accent); margin-bottom: 20px;">INICIAR CONTACTO OPERATIVO</h2>
+        <p>Seleccione su prioridad para una consultoría personalizada de datos.</p>
+        
+        <div class="form-container" data-aos="fade-up">
+            <div class="form-group">
+                <label>Prioridad de Inteligencia</label>
+                <select id="prioridad">
+                    <option>Seguridad de Activos / K&R (Kidnap & Ransom)</option>
+                    <option>Logística y Última Milla</option>
+                    <option>Expansión Inmobiliaria</option>
+                    <option>Estrategia Política / Electoral</option>
+                </select>
+            </div>
+            <p style="font-size: 0.8rem; color: #555; margin-bottom: 20px;">Al hacer clic, se abrirá su gestor de correo para enviar su solicitud a politeiacmaps@gmail.com</p>
+            <a href="mailto:politeiacmaps@gmail.com?subject=Solicitud de Consultoría IRSO - CMAPS" class="btn-mail">
+                INICIAR CONSULTORÍA AHORA
+            </a>
+        </div>
+    </section>
+
     <footer>
-        <p>CMAPS &copy; 2026 | Sede Ciudad de México</p>
-        <p style="margin-top: 10px; opacity: 0.4;">CMAPS es una firma independiente de inteligencia cartográfica. Prohibida la reproducción parcial o total del modelo IRSO sin autorización. Modelo validado en 6,706 secciones del Estado de México.</p>
+        <p>CMAPS &copy; 2026 | Inteligencia Cartográfica Independiente | Sede Ciudad de México</p>
+        <p style="margin-top: 10px; opacity: 0.4;">Prohibida la reproducción parcial o total del modelo IRSO sin autorización. Modelo auditado en 6,706 secciones.</p>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
