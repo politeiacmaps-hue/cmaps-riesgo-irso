@@ -3,133 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CMAPS | Inteligencia Territorial IRSO</title>
+    <title>CMAPS | Autoridad en Inteligencia Territorial IRSO</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #050608; }
-        .hero-bg {
-            background: linear-gradient(rgba(5,6,8,0.7), rgba(5,6,8,1)), url('./hero-slider-irso.jpg');
+        :root {
+            --accent: #00f2ff;
+            --cmaps-gold: #c5a059;
+        }
+        body { font-family: 'Montserrat', sans-serif; background-color: #050608; color: #e2e8f0; }
+        h1, h2, h3, .tech-font { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
+        
+        .hero-luxury {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(5,6,8,1)), url('hero-slider-irso.jpg');
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
         }
-        .step-card:hover { transform: translateY(-10px); transition: all 0.3s ease; border-color: #00f2ff; }
-        .img-glow:hover { box-shadow: 0 0 30px rgba(0, 242, 255, 0.3); border-color: #00f2ff; transition: 0.5s; }
+
+        .border-glow { border: 1px solid rgba(0, 242, 255, 0.3); box-shadow: 0 0 15px rgba(0, 242, 255, 0.1); }
+        .border-glow:hover { border-color: var(--accent); box-shadow: 0 0 30px rgba(0, 242, 255, 0.4); transition: 0.5s; }
+        
+        .text-gradient {
+            background: linear-gradient(to right, #fff, var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .joya-section {
+            background: linear-gradient(45deg, #0a0c10 0%, #11141a 100%);
+            border: 1px solid rgba(197, 160, 89, 0.2);
+        }
     </style>
 </head>
-<body class="text-slate-200">
+<body>
 
-    <header class="hero-bg h-screen flex items-center justify-center text-center px-6 border-b-2 border-cyan-500">
-        <div data-aos="zoom-out" class="max-w-5xl">
-            <h1 class="text-4xl md:text-7xl font-extrabold text-white mb-6 tracking-tight uppercase">
-                Decodificamos el territorio <span class="text-cyan-400">donde otros solo ven mapas.</span>
+    <header class="hero-luxury h-screen flex items-center justify-center text-center px-6">
+        <div data-aos="fade-up" class="max-w-6xl">
+            <div class="mb-6 inline-block px-4 py-1 border border-cyan-500 text-cyan-500 text-xs tracking-widest uppercase">
+                Exclusivo de Politeia & CMAPS
+            </div>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient">
+                DECODIFICAMOS EL TERRITORIO <br>
+                <span class="text-2xl md:text-4xl font-light">DONDE OTROS SOLO VEN MAPAS</span>
             </h1>
-            <p class="text-xl md:text-2xl text-slate-300 mb-8 font-light">
-                35 años de inteligencia cartográfica aplicada al Índice IRSO: La única metodología que integra seguridad, demografía y gobernabilidad.
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-4xl mx-auto leading-relaxed">
+                Presentamos el <strong>Índice IRSO</strong>: La arquitectura de síntesis geográfica más robusta del mercado, creada y validada por <strong>CMAPS</strong> tras 35 años de liderazgo en inteligencia territorial.
             </p>
-            <div class="inline-block border-2 border-red-600 bg-red-600/10 px-8 py-4 rounded-sm">
-                <span class="block text-3xl font-bold text-red-500">99.40%</span>
-                <span class="text-xs uppercase tracking-widest text-white">Salud Metodológica Auditada</span>
+            <div class="flex flex-col md:flex-row justify-center gap-6 items-center">
+                <div class="border-l-2 border-red-600 pl-4 text-left">
+                    <span class="block text-3xl font-bold text-red-500">99.40%</span>
+                    <span class="text-[10px] uppercase tracking-tighter">Salud Metodológica Auditada</span>
+                </div>
             </div>
         </div>
     </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-24">
-        <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="text-cyan-500 font-bold tracking-widest uppercase text-sm mb-3">Metodología Comprobada</h2>
-            <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6">¿Cómo funciona el IRSO?</h2>
-            <p class="text-lg text-slate-400 max-w-3xl mx-auto italic">
-                "No es un parche sobre otro; es una arquitectura de datos diseñada para ser infalible."
+    <section class="max-w-7xl mx-auto px-6 py-24">
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div data-aos="fade-right">
+                <h2 class="text-cyan-400 text-sm mb-2 uppercase tracking-widest">Patrimonio Intelectual</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-6 italic">¿Por qué el IRSO es Infalible?</h3>
+                <p class="text-slate-400 mb-6 leading-relaxed">
+                    A diferencia de los modelos convencionales, el <strong>Índice de Riesgo Social y Operativo (IRSO)</strong> no es un parche de datos. Es una matriz maestra diseñada en <strong>Politeia</strong> que utiliza procesos de <em>Cruce Geoespacial Profundo</em> mediante QGIS.
+                </p>
+                <ul class="space-y-4 text-sm text-slate-300">
+                    <li class="flex items-center gap-3"><span class="text-cyan-500">✔</span> Fusión de capas Censales, Electorales y Delictivas.</li>
+                    <li class="flex items-center gap-3"><span class="text-cyan-500">✔</span> Algoritmo de ponderación de vulnerabilidad real.</li>
+                    <li class="flex items-center gap-3"><span class="text-cyan-500">✔</span> Validación de campo bajo el principio de "Hacer y Comprobar".</li>
+                </ul>
+            </div>
+            <div data-aos="fade-left" class="relative">
+                <img src="irso-municipal-tendencia.jpg" class="rounded-lg border-glow" alt="CMAPS Municipal">
+                <div class="absolute -bottom-4 -right-4 bg-cyan-600 px-6 py-2 text-xs font-bold uppercase">Visión Macro Municipal</div>
+            </div>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div class="order-2 md:order-1" data-aos="fade-right">
+                <img src="irso-manzana-micro.jpg" class="rounded-lg border-glow" alt="CMAPS Manzana">
+                <div class="absolute -bottom-4 -left-4 bg-emerald-600 px-6 py-2 text-xs font-bold uppercase">Precisión Quirúrgica</div>
+            </div>
+            <div class="order-1 md:order-2" data-aos="fade-left">
+                <h3 class="text-3xl font-bold mb-6">El Micro-Territorio: La Manzana</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Donde la estrategia se vuelve operativa. CMAPS decodifica la densidad y vulnerabilidad sociodemográfica al nivel más básico de la cartografía urbana, permitiendo una lectura calle por calle de la exposición al riesgo.
+                </p>
+            </div>
+        </div>
+
+        <div class="joya-section p-8 md:p-20 rounded-3xl text-center mb-32" data-aos="zoom-in">
+            <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em]">La Joya de la Corona</h2>
+            <h3 class="text-4xl md:text-6xl font-bold mb-8 uppercase">IRSO Seccional</h3>
+            <div class="max-w-5xl mx-auto mb-12">
+                <img src="irso-seccional-joya.jpg" class="w-full rounded-xl shadow-2xl border-2 border-cyan-500/20" alt="La Joya de la Corona CMAPS">
+            </div>
+            <p class="max-w-3xl mx-auto text-lg text-slate-300 leading-relaxed italic">
+                "Aquí es donde se conjuga el poder de CMAPS. En la Sección Electoral, el IRSO integra la gobernabilidad, el comportamiento electoral y el Silencio Operativo para entregar la Verdad Territorial Definitiva."
             </p>
         </div>
 
-        <div class="grid md:grid-cols-3 gap-8 mb-20">
-            <div class="step-card bg-slate-900/50 p-8 rounded-2xl border border-slate-800" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-12 h-12 bg-cyan-900/30 text-cyan-400 rounded-lg flex items-center justify-center font-bold text-xl mb-6 border border-cyan-900">01</div>
-                <h3 class="text-xl font-bold mb-4 text-white uppercase italic">Cruce Geoespacial</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Utilizamos herramientas de alta precisión como <strong>QGIS (Join attributes by location)</strong> para fusionar capas de datos censales, electorales y delictivos en una sola matriz maestra.
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
+            <div data-aos="fade-right">
+                <h3 class="text-3xl font-bold mb-6 uppercase">Abstencionismo: El Silencio que Habla</h3>
+                <p class="text-slate-400 leading-relaxed">
+                    Utilizamos el comportamiento electoral como un sensor de gobernabilidad. Zonas con alto abstencionismo en contextos críticos revelan vacíos de poder que nuestro modelo traduce en mapas de riesgo para decisiones de alta dirección.
                 </p>
             </div>
-
-            <div class="step-card bg-slate-900/50 p-8 rounded-2xl border border-slate-800" data-aos="fade-up" data-aos-delay="200">
-                <div class="w-12 h-12 bg-cyan-900/30 text-cyan-400 rounded-lg flex items-center justify-center font-bold text-xl mb-6 border border-cyan-900">02</div>
-                <h3 class="text-xl font-bold mb-4 text-white uppercase italic">Cálculo de Algoritmo</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Aplicamos el Índice de Riesgo Social y Operativo. No es una suma simple; es un algoritmo que pondera la vulnerabilidad y la operatividad de cada zona.
-                </p>
-            </div>
-
-            <div class="step-card bg-slate-900/50 p-8 rounded-2xl border border-slate-800" data-aos="fade-up" data-aos-delay="300">
-                <div class="w-12 h-12 bg-cyan-900/30 text-cyan-400 rounded-lg flex items-center justify-center font-bold text-xl mb-6 border border-cyan-900">03</div>
-                <h3 class="text-xl font-bold mb-4 text-white uppercase italic">Validación de Campo</h3>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Siguiendo el principio de <strong>Hacer y Comprobar</strong>, cada modelo es validado contra la realidad del territorio antes de ser entregado al cliente final.
-                </p>
-            </div>
-        </div>
-
-        <div class="space-y-24">
-            <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
-                <div class="w-full md:w-3/5">
-                    <img src="./irso-municipal-tendencia.jpg" class="rounded-xl border border-slate-800 img-glow" alt="IRSO Municipal">
-                </div>
-                <div class="w-full md:w-2/5 border-l-4 border-blue-500 pl-6">
-                    <h4 class="text-2xl font-bold text-blue-400 uppercase">Visión Macro: Municipal</h4>
-                    <p class="text-slate-400 mt-4 leading-relaxed">Identificación de tendencias regionales. Ideal para planeación presupuestal y grandes estrategias de gobierno.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row-reverse items-center gap-12" data-aos="fade-left">
-                <div class="w-full md:w-3/5">
-                    <img src="./irso-electoral-abstencionismo.jpg" class="rounded-xl border border-slate-800 img-glow" alt="IRSO Seccional">
-                </div>
-                <div class="w-full md:w-2/5 border-l-4 border-cyan-500 pl-6">
-                    <h4 class="text-2xl font-bold text-cyan-400 uppercase">Visión Operativa: Sección</h4>
-                    <p class="text-slate-400 mt-4 leading-relaxed">El mapa de batalla. Permite asignar brigadas y recursos en las áreas de mayor impacto electoral y social basándose en el Silencio Operativo.</p>
-                </div>
-            </div>
-
-            <div class="flex flex-col md:flex-row items-center gap-12" data-aos="fade-right">
-                <div class="w-full md:w-3/5">
-                    <img src="./irso-manzana-micro.jpg" class="rounded-xl border border-slate-800 img-glow" alt="IRSO Manzana">
-                </div>
-                <div class="w-full md:w-2/5 border-l-4 border-emerald-500 pl-6">
-                    <h4 class="text-2xl font-bold text-emerald-400 uppercase">Visión Quirúrgica: Manzana</h4>
-                    <p class="text-slate-400 mt-4 leading-relaxed">Inteligencia de precisión. Detectamos el riesgo calle por calle, permitiendo una operación segura y efectiva al 100%.</p>
-                </div>
+            <div data-aos="fade-left">
+                <img src="irso-electoral-abstencionismo.jpg" class="rounded-lg border-glow" alt="Abstencionismo CMAPS">
             </div>
         </div>
     </section>
 
-    <section class="bg-black py-24 px-6 border-t border-slate-900">
-        <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
-            <h2 class="text-3xl md:text-5xl font-bold text-white mb-8 uppercase tracking-tighter">Iniciar Contacto Operativo</h2>
-            <div class="bg-slate-900 p-8 md:p-12 rounded-3xl border border-cyan-500/30 text-left">
+    <section class="bg-[#0a0b0d] py-24 border-t border-slate-900">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-3xl font-bold mb-12 uppercase tracking-widest text-white">Iniciar Consultoría CMAPS</h2>
+            <div class="bg-slate-900/50 p-10 rounded-2xl border border-cyan-500/20 text-left">
                 <div class="mb-8">
-                    <label class="text-cyan-400 text-xs font-bold uppercase tracking-widest block mb-4">Seleccione Prioridad de Inteligencia</label>
-                    <select class="w-full bg-slate-950 border border-slate-800 p-4 rounded-lg text-white focus:outline-none focus:border-cyan-500">
-                        <option>Seguridad de Activos / K&R (Kidnap & Ransom)</option>
-                        <option>Logística y Última Milla</option>
-                        <option>Expansión Inmobiliaria</option>
-                        <option>Estrategia Política / Electoral</option>
+                    <label class="text-cyan-500 text-[10px] font-bold uppercase mb-3 block">Prioridad Estratégica</label>
+                    <select class="w-full bg-black border border-slate-800 p-4 rounded text-white focus:border-cyan-500 outline-none">
+                        <option>Análisis de Gobernabilidad / Estrategia Política</option>
+                        <option>Logística Crítica y Última Milla</option>
+                        <option>Inteligencia Inmobiliaria de Alto Valor</option>
+                        <option>Seguridad Patrimonial y Operativa</option>
                     </select>
                 </div>
-                <p class="text-slate-500 text-sm mb-6">Al hacer clic, se abrirá su gestor de correo para conectar directamente con <strong>politeiacmaps@gmail.com</strong>.</p>
-                <a href="mailto:politeiacmaps@gmail.com?subject=Solicitud de Inteligencia IRSO - CMAPS" 
-                   class="block w-full bg-transparent border-2 border-cyan-500 text-cyan-400 text-center py-5 rounded-lg font-bold hover:bg-cyan-500 hover:text-black transition-all duration-300 uppercase tracking-widest">
-                    Iniciar Consultoría Ahora
+                <a href="mailto:politeiacmaps@gmail.com?subject=Consulta de Inteligencia IRSO - CMAPS" 
+                   class="block w-full bg-cyan-600 hover:bg-cyan-500 text-black font-bold py-5 rounded text-center transition-all uppercase tracking-widest text-sm">
+                    Establecer Conexión Directa
                 </a>
+                <p class="mt-6 text-[10px] text-center text-slate-600 uppercase tracking-widest">
+                    Canal oficial: politeiacmaps@gmail.com
+                </p>
             </div>
         </div>
     </section>
 
-    <footer class="py-12 px-6 text-center text-slate-600 text-sm border-t border-slate-950">
-        <p class="mb-2">CMAPS &copy; 2026 | Inteligencia Cartográfica Independiente | Sede Ciudad de México</p>
-        <p class="max-w-2xl mx-auto opacity-50 italic">
-            Prohibida la reproducción parcial o total del modelo IRSO sin autorización expresa. Modelo auditado estadísticamente en 6,706 secciones electorales.
+    <footer class="py-16 text-center border-t border-white/5 px-6">
+        <div class="mb-8">
+            <h4 class="text-xl font-bold text-white tracking-widest">CMAPS | POLITEIA</h4>
+            <p class="text-[10px] text-slate-500 uppercase mt-2">Fundado por los creadores originales del Índice IRSO</p>
+        </div>
+        <p class="max-w-3xl mx-auto text-xs text-slate-600 leading-relaxed">
+            &copy; 2026 CMAPS Intelligence Group. Los modelos cartográficos, algoritmos de ponderación y el Índice IRSO son propiedad intelectual protegida. Prohibida su reproducción total o parcial sin consentimiento por escrito. 35 años decodificando el territorio.
         </p>
     </footer>
 
