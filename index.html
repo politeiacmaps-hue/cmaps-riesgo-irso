@@ -26,25 +26,14 @@
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
 
-        @keyframes pulse-cyan {
-            0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.7); }
-            70% { box-shadow: 0 0 0 20px rgba(0, 242, 255, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
-        }
-        
-        .btn-final { 
-            animation: pulse-cyan 2s infinite; 
-            display: block !important;
-            position: relative !important;
-            z-index: 9999 !important; 
-            cursor: pointer !important;
-            background-color: #0891b2 !important;
-        }
-        .btn-final:hover { background-color: #22d3ee !important; transform: scale(1.02); }
-
         .joya-section {
             background: linear-gradient(45deg, #0a0c10 0%, #11141a 100%);
             border: 1px solid rgba(0, 242, 255, 0.1);
+        }
+
+        .contact-card {
+            background: linear-gradient(180deg, rgba(8,145,178,0.1) 0%, rgba(5,6,8,1) 100%);
+            border: 1px solid rgba(0, 242, 255, 0.2);
         }
     </style>
 </head>
@@ -76,7 +65,7 @@
                 <h2 class="text-cyan-400 text-sm mb-2 uppercase tracking-widest font-bold text-left">Patrimonio Intelectual</h2>
                 <h3 class="text-3xl md:text-4xl font-bold mb-6 italic uppercase text-left">¿Por qué el IRSO es Infalible?</h3>
                 <p class="text-slate-400 mb-6 leading-relaxed text-justify">
-                    El <strong>Índice de Riesgo Social y Operativo (IRSO)</strong> es una matriz maestra diseñada en <strong>Politeia</strong> que utiliza procesos de síntesis profunda para fusionar capas en una sola verdad operativa. Nos guiaremos por el principio de "Hacer, Comprobar que Funcione, y Luego Avanzar".
+                    El <strong>Índice de Riesgo Social y Operativo (IRSO)</strong> es una matriz maestra diseñada en <strong>Politeia</strong> que utiliza procesos de síntesis profunda para fusionar capas en una sola verdad operativa.
                 </p>
                 <ul class="space-y-4 text-sm text-slate-300">
                     <li class="flex items-center gap-3"><span class="text-cyan-500 font-bold text-xl">✔</span> Fusión de capas Censales, Electorales y Delictivas.</li>
@@ -127,22 +116,26 @@
         </div>
     </section>
 
-    <section class="bg-black py-24 border-t border-slate-900 relative">
+    <section class="bg-black py-24 border-t border-slate-900">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-3xl md:text-4xl font-bold mb-12 uppercase tracking-widest text-white italic">Iniciar Consultoría CMAPS</h2>
-            <div class="bg-slate-900/40 p-10 rounded-2xl border border-cyan-500/20 text-left shadow-2xl relative z-10">
-                <p class="text-slate-300 text-sm mb-10 text-center font-light">
-                    Haga clic en el botón inferior para abrir su cliente de correo oficial y conectar con nuestro equipo.
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-widest text-white italic">Contacto Directo</h2>
+            <div class="contact-card p-12 rounded-3xl shadow-2xl">
+                <p class="text-slate-300 text-lg mb-8 font-light leading-relaxed">
+                    Para iniciar una consultoría estratégica basada en el <strong>Índice IRSO</strong>, establezca contacto a través de nuestro canal oficial de inteligencia:
                 </p>
                 
-                <a href="mailto:politeiacmaps@gmail.com?subject=Consulta IRSO - CMAPS&body=Deseo informes sobre el Índice IRSO." 
-                   class="btn-final w-full text-black font-extrabold py-6 rounded text-center transition-all duration-300 uppercase tracking-widest text-sm shadow-lg">
-                    Establecer Conexión Directa
-                </a>
-                
-                <p class="mt-8 text-[13px] text-center text-cyan-400 font-bold uppercase tracking-[0.2em] bg-cyan-950/40 py-4 rounded">
-                    Canal oficial: <span class="text-white ml-2 underline">politeiacmaps@gmail.com</span>
-                </p>
+                <div class="space-y-6">
+                    <div class="inline-block">
+                        <span class="text-cyan-500 text-[10px] font-bold uppercase tracking-[0.3em] block mb-2">Email de Consultoría</span>
+                        <a href="mailto:politeiacmaps@gmail.com" class="text-2xl md:text-4xl font-bold text-white hover:text-cyan-400 transition-colors duration-300 break-all">
+                            politeiacmaps@gmail.com
+                        </a>
+                    </div>
+                    
+                    <div class="pt-8 border-t border-cyan-900/30">
+                        <p class="text-[10px] text-slate-500 uppercase tracking-[0.4em]">CMAPS Intelligence Group | Politeia</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
