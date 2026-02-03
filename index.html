@@ -8,7 +8,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        :root { --accent: #00f2ff; --red-glitch: #ff003c; }
+        :root { --accent: #00f2ff; }
         body { font-family: 'Montserrat', sans-serif; background-color: #050608; color: #e2e8f0; overflow-x: hidden; }
         h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
         .hero-luxury {
@@ -19,53 +19,53 @@
             background: linear-gradient(to right, #fff, var(--accent));
             -webkit-background-clip: text; -webkit-text-fill-color: transparent;
         }
-        .formula-box {
-            background: rgba(0, 242, 255, 0.05);
-            border: 1px solid rgba(0, 242, 255, 0.2);
-            font-family: 'Orbitron', sans-serif;
-        }
-        .dimension-card {
-            background: rgba(15, 23, 42, 0.4);
-            border-left: 3px solid var(--accent);
-            transition: 0.3s;
-        }
+        .border-glow { border: 1px solid rgba(0, 242, 255, 0.2); transition: 0.5s; }
+        .border-glow:hover { border-color: var(--accent); box-shadow: 0 0 20px rgba(0, 242, 255, 0.2); }
+        .formula-box { background: rgba(0, 242, 255, 0.05); border: 1px solid rgba(0, 242, 255, 0.2); }
+        .feature-block { background: rgba(15, 23, 42, 0.4); border-left: 4px solid var(--accent); transition: all 0.3s ease; }
+        .feature-block:hover { background: rgba(15, 23, 42, 0.6); border-left-width: 8px; }
+        .dimension-card { background: rgba(15, 23, 42, 0.4); border-left: 3px solid var(--accent); transition: 0.3s; }
         .dimension-card:hover { background: rgba(15, 23, 42, 0.7); transform: translateX(10px); }
     </style>
 </head>
 <body>
 
-    <header class="hero-luxury h-[80vh] flex items-center justify-center text-center px-6">
+    <header class="hero-luxury h-screen flex items-center justify-center text-center px-6">
         <div data-aos="fade-up" class="max-w-6xl">
             <div class="mb-6 inline-block px-4 py-1 border border-cyan-500 text-cyan-500 text-[10px] tracking-[0.4em] uppercase font-bold bg-cyan-500/10">
-                CMAPS
+                Exclusivo de CMAPS & POLITEIA
             </div>
-            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient uppercase leading-tight">
-                Índice IRSO CMAPS <br>
-                <span class="text-xl md:text-3xl font-light italic text-white tracking-widest">Riesgo Socioterritorial Operativo</span>
+            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient uppercase">
+                Decodificamos el territorio <br>
+                <span class="text-2xl md:text-4xl font-light italic text-white">donde otros solo ven mapas</span>
             </h1>
-            <p class="text-slate-400 max-w-3xl mx-auto leading-relaxed italic font-light">
-                El IRSO es una métrica de inteligencia geoespacial avanzada diseñada para cuantificar la vulnerabilidad de la continuidad operativa frente a su entorno. A diferencia de los modelos de riesgo tradicionales, no se limita a datos estadísticos aislados; fusiona variables sociales, físicas y políticas
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-4xl mx-auto leading-relaxed font-light italic">
+                El <strong>Índice IRSO</strong> es una métrica de inteligencia geoespacial avanzada diseñada para cuantificar la vulnerabilidad de la continuidad operativa frente a su entorno.
             </p>
+            <div class="border-l-4 border-red-600 pl-6 text-left inline-block mt-8">
+                <span class="block text-4xl font-bold text-red-500">99.40%</span>
+                <span class="text-[10px] uppercase tracking-widest text-white font-bold">Salud Metodológica Auditada</span>
+            </div>
         </div>
     </header>
 
-    <section class="max-w-7xl mx-auto px-6 py-24">
+    <section class="max-w-7xl mx-auto px-6 py-24 border-b border-white/5">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
-                <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em] font-bold">Naturaleza del IRSO</h2>
-                <h3 class="text-3xl font-bold mb-6 uppercase italic">El Corazón del Índice</h3>
-                <p class="text-slate-400 mb-8 text-sm leading-relaxed text-justify">
-                    El IRSO CMAPS evalúa la <strong>Probabilidad de Interrupción (PI)</strong> de la actividad económica fusionando variables sociales, físicas y políticas con la capacidad tecnológica.
+                <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em] font-bold italic">Naturaleza Operativa</h2>
+                <h3 class="text-3xl font-bold mb-6 uppercase italic">El Corazón del IRSO</h3>
+                <p class="text-slate-400 mb-8 text-sm leading-relaxed text-justify italic">
+                    Evaluamos la <strong>Probabilidad de Interrupción (PI)</strong> de la actividad económica mediante tres dimensiones críticas: Riesgo Social, Territorial y Operativo.
                 </p>
                 <div class="space-y-4">
-                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-cyan-500 shadow-[0_0_10px_#00f2ff]"></span> <p class="text-xs uppercase tracking-wider"><strong>Riesgo Social:</strong> Nivel de cohesión, movilización o resistencia de grupos locales.</p></div>
-                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-emerald-500 shadow-[0_0_10px_#10b981]"></span> <p class="text-xs uppercase tracking-wider"><strong>Riesgo Territorial:</strong> Factores geográficos, ambientales y de conectividad (vulnerabilidad física).</p></div>
-                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-red-500 shadow-[0_0_10px_#ff003c]"></span> <p class="text-xs uppercase tracking-wider"><strong>Riesgo Operativo:</strong> Impacto directo en la seguridad de activos, procesos internos y rentabilidad.</p></div>
+                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-cyan-500"></span> <p class="text-[10px] uppercase tracking-wider"><strong>Riesgo Social:</strong> Movilización o resistencia de grupos locales.</p></div>
+                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-emerald-500"></span> <p class="text-[10px] uppercase tracking-wider"><strong>Riesgo Territorial:</strong> Conectividad y vulnerabilidad física.</p></div>
+                    <div class="flex items-center gap-4"><span class="w-2 h-2 bg-red-500"></span> <p class="text-[10px] uppercase tracking-wider"><strong>Riesgo Operativo:</strong> Impacto en activos y rentabilidad.</p></div>
                 </div>
             </div>
             <div data-aos="fade-left" class="formula-box p-12 rounded-3xl text-center">
-                <h4 class="text-cyan-500 text-[10px] uppercase mb-8 tracking-widest">Algoritmo de Verificabilidad Científica</h4>
-                <div class="text-3xl md:text-5xl font-bold tracking-tighter">
+                <h4 class="text-cyan-500 text-[10px] uppercase mb-8 tracking-widest font-bold">Algoritmo de Verificabilidad Científica</h4>
+                <div class="text-3xl md:text-5xl font-bold tracking-tighter italic">
                     IRSO = <span class="text-white"> (A × V) </span> / <span class="text-cyan-400">R</span>
                 </div>
                 <div class="grid grid-cols-3 mt-8 text-[9px] uppercase text-slate-500 font-bold">
@@ -77,71 +77,95 @@
         </div>
     </section>
 
-    <section class="py-24 bg-[#080a0f] border-y border-white/5">
+    <section class="py-24 bg-[#080a0f]">
         <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-center text-4xl font-bold mb-20 uppercase italic text-gradient">Capas de Inteligencia</h3>
-            
+            <h3 class="text-center text-3xl font-bold mb-20 uppercase italic text-gradient">Dimensiones de Análisis</h3>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="dimension-card p-8 rounded-xl" data-aos="fade-up">
-                    <h4 class="text-cyan-500 font-bold text-xs uppercase mb-4 tracking-tighter">A. La Micro-Escala (Nivel Manzana)</h4>
-                    <ul class="text-[11px] space-y-4 text-slate-400 leading-relaxed">
-                        <li><strong class="text-white block uppercase">Zonas de Vulnerabilidad:</strong> Analfabetismo.</li>
-                        <li><strong class="text-white block uppercase">Brecha de Infraestructura:</strong> Predictor de fallas técnicas por precariedad de servicios.</li>
-                    </ul>
+                    <h4 class="text-cyan-500 font-bold text-xs uppercase mb-4">A. Dimensión Censal (Manzana)</h4>
+                    <p class="text-[11px] text-slate-400 italic">Identificamos "Zonas de Silencio" y brechas de infraestructura que predicen fallas técnicas y vandalismo.</p>
                 </div>
-                <div class="dimension-card p-8 rounded-xl border-emerald-500/50" data-aos="fade-up" data-aos-delay="100" style="border-left-color: #10b981;">
-                    <h4 class="text-emerald-500 font-bold text-xs uppercase mb-4 tracking-tighter">B. Incidencia Delictiva Municipal (Factor Multiplicador)</h4>
-                    <ul class="text-[11px] space-y-4 text-slate-400 leading-relaxed">
-                        <li><strong class="text-white block uppercase">Blindaje de Campo:</strong> Basado en la incidencia delictiva mensual.</li>
-                        <li><strong class="text-white block uppercase">Reforzamiento Físico:</strong> Definido por delitos de alto impacto y comunes.</li>
-                    </ul>
+                <div class="dimension-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="100" style="border-left-color: #10b981;">
+                    <h4 class="text-emerald-500 font-bold text-xs uppercase mb-4">B. Dimensión Criminal (Multiplicador)</h4>
+                    <p class="text-[11px] text-slate-400 italic">Tasas por cada 100k habitantes para normalizar el riesgo. Blindaje de campo basado en delitos de alto impacto.</p>
                 </div>
-                <div class="dimension-card p-8 rounded-xl border-red-500/50" data-aos="fade-up" data-aos-delay="200" style="border-left-color: #ff003c;">
-                    <h4 class="text-red-500 font-bold text-xs uppercase mb-4 tracking-tighter">C. Dimensión Político-Electoral</h4>
-                    <ul class="text-[11px] space-y-4 text-slate-400 leading-relaxed">
-                        <li><strong class="text-white block uppercase">Abstencionismo Crítico:</strong> Correlación con ruptura del tejido social y grupos fácticos.</li>
-                        <li><strong class="text-white block uppercase">Feudos Políticos:</strong> Predicción de receptividad y bloqueos operativos.</li>
-                    </ul>
+                <div class="dimension-card p-8 rounded-xl" data-aos="fade-up" data-aos-delay="200" style="border-left-color: #ff003c;">
+                    <h4 class="text-red-500 font-bold text-xs uppercase mb-4">C. Dimensión Político-Electoral</h4>
+                    <p class="text-[11px] text-slate-400 italic">Mapeo de feudos y abstencionismo crítico. Correlación directa entre ruptura del tejido social y riesgo volátil.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto px-6 py-24">
-        <div class="grid md:grid-cols-2 gap-16 items-center mb-20">
-            <div class="order-2 md:order-1">
-                <img src="irso-manzana-micro.jpg" class="rounded-lg border-glow w-full opacity-70">
+    <section class="max-w-7xl mx-auto px-6 py-24 border-t border-white/5">
+        <div class="text-center mb-20">
+            <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em] font-bold">Arquitectura Geográfica</h2>
+            <h3 class="text-4xl font-bold mb-6 uppercase italic">Los 3 Niveles de Precisión</h3>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-right">
+            <div>
+                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic">IRSO Municipio</h4>
+                <p class="text-slate-400 leading-relaxed text-sm text-justify italic">Identificación de tendencias regionales. Operando con precisión total en CDMX y EDOMEX.</p>
             </div>
-            <div class="order-1 md:order-2" data-aos="fade-left">
-                <h3 class="text-3xl font-bold mb-8 uppercase italic">De la Geografía a la Rentabilidad</h3>
-                <div class="space-y-6">
-                    <div class="border-b border-white/10 pb-4">
-                        <span class="text-cyan-400 font-bold text-xs uppercase">Optimización CAPEX/OPEX</span>
-                        <p class="text-xs text-slate-400 mt-2 italic">Invertir en mitigación exactamente donde la densidad y el riesgo coinciden.</p>
-                    </div>
-                    <div class="border-b border-white/10 pb-4">
-                        <span class="text-cyan-400 font-bold text-xs uppercase">Continuidad del Negocio</span>
-                        <p class="text-xs text-slate-400 mt-2 italic">Identificar fallas socioterritoriales constantes antes que errores técnicos.</p>
-                    </div>
-                    <div>
-                        <span class="text-cyan-400 font-bold text-xs uppercase">Seguridad Humana</span>
-                        <p class="text-xs text-slate-400 mt-2 italic">Protocolos basados en datos reales para reducir el estrés del entorno operativo.</p>
-                    </div>
-                </div>
+            <img src="irso-municipal-tendencia.jpg" class="rounded-lg border-glow w-full shadow-2xl">
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-left">
+            <div class="order-2 md:order-1"><img src="irso-seccional-joya.jpg" class="rounded-lg border-glow w-full shadow-2xl"></div>
+            <div class="order-1 md:order-2">
+                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic">IRSO Sección</h4>
+                <p class="text-slate-400 leading-relaxed text-sm text-justify italic">El mapa de batalla. Permite asignar recursos en las áreas de mayor impacto y rentabilidad.</p>
             </div>
         </div>
 
-        <div class="bg-gradient-to-r from-cyan-900/20 to-transparent p-12 border border-cyan-500/30 rounded-3xl text-center" data-aos="zoom-in">
-            <p class="text-xl md:text-2xl font-light italic text-slate-200 mb-6">
-                "Operar bajo este índice es aceptar que la actividad comercial no ocurre en el vacío."
-            </p>
-            <p class="text-[10px] uppercase tracking-[0.5em] text-cyan-500 font-bold">IRSO CMAPS: La hoja de ruta para la resiliencia operativa</p>
+        <div class="grid md:grid-cols-2 gap-16 items-center" data-aos="fade-right">
+            <div>
+                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic">IRSO Manzana</h4>
+                <p class="text-slate-400 leading-relaxed text-sm text-justify italic">Visión quirúrgica calle por calle. Eliminamos el "sesgo de promedio" para una operación segura.</p>
+            </div>
+            <img src="irso-manzana-micro.jpg" class="rounded-lg border-glow w-full shadow-2xl">
+        </div>
+    </section>
+
+    <section class="py-24 bg-[#080a0f] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-20 text-center">
+                <h3 class="text-4xl font-extrabold text-white uppercase italic text-gradient">Poder Operativo Territorial</h3>
+            </div>
+
+            <div class="mb-8 feature-block p-10 rounded-r-3xl" data-aos="fade-right">
+                <div class="grid md:grid-cols-3 gap-10 items-center">
+                    <h4 class="text-2xl font-extrabold text-white uppercase italic">Estrategia Política</h4>
+                    <div class="md:col-span-2 border-l border-white/10 md:pl-10 text-sm text-slate-300 italic italic">
+                        Identificación de lealtades y volatilidad regional. Conozca el ADN de cada colonia para recuperar el control territorial basado en datos.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-8 feature-block p-10 rounded-r-3xl" data-aos="fade-right" data-aos-delay="100">
+                <div class="grid md:grid-cols-3 gap-10 items-center">
+                    <h4 class="text-2xl font-extrabold text-white uppercase italic">Gestión de Crisis</h4>
+                    <div class="md:col-span-2 border-l border-white/10 md:pl-10 text-sm text-slate-300 italic italic">
+                        Identificación de tensiones sociales antes de que escalen a incidentes reputacionales. Manejo de conflictos con precisión quirúrgica.
+                    </div>
+                </div>
+            </div>
+
+            <div class="feature-block p-10 rounded-r-3xl" data-aos="fade-right" data-aos-delay="200">
+                <div class="grid md:grid-cols-3 gap-10 items-center">
+                    <h4 class="text-2xl font-extrabold text-white uppercase italic">Logística Crítica</h4>
+                    <div class="md:col-span-2 border-l border-white/10 md:pl-10 text-sm text-slate-300 italic italic">
+                        Clasificación de zonas por riesgo real. Optimización de CAPEX/OPEX e inversión exacta donde la densidad y el riesgo coinciden.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <footer class="py-24 text-center border-t border-white/5 px-6 bg-[#050608]">
         <h4 class="text-2xl font-bold text-white tracking-[0.3em] uppercase italic mb-4">CMAPS | POLITEIA</h4>
-        <p class="text-[10px] text-cyan-500 font-bold uppercase tracking-widest mb-10">35 años de Liderazgo Geoespacial</p>
+        <p class="text-[10px] text-cyan-500 font-bold uppercase tracking-widest mb-10">35 años de Liderazgo Territorial</p>
         <p class="text-cyan-400 text-3xl md:text-5xl font-extrabold tracking-tighter hover:text-white transition-all">
             politeiacmaps@gmail.com
         </p>
@@ -151,5 +175,3 @@
     <script>AOS.init({ duration: 1000, once: true });</script>
 </body>
 </html>
-
-
