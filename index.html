@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
         :root { --accent: #00f2ff; }
-        body { font-family: 'Montserrat', sans-serif; background-color: #050608; color: #e2e8f0; overflow-x: hidden; }
+        body { font-family: 'Montserrat', sans-serif; background-color: #050608; color: #e2e8f0; overflow-x: hidden; width: 100%; }
         h1, h2, h3, h4 { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
         
         .hero-luxury {
@@ -46,7 +46,6 @@
             height: 100%;
         }
 
-        /* Ajuste de franjas laterales para la sección "¿Para quién es CMAPS?" */
         .feature-card {
             background: rgba(15, 23, 42, 0.4);
             position: relative;
@@ -54,25 +53,25 @@
             transition: 0.3s;
         }
         .feature-card:hover { background: rgba(15, 23, 42, 0.6); }
-        .strip { position: absolute; left: 0; top: 0; h-full; width: 4px; height: 100%; }
+        .strip { position: absolute; left: 0; top: 0; width: 4px; height: 100%; }
     </style>
 </head>
 <body>
 
-    <header class="hero-luxury h-screen flex items-center justify-center text-center px-6">
-        <div data-aos="fade-up" class="max-w-6xl">
+    <header class="hero-luxury min-h-screen flex items-center justify-center text-center px-4 py-20">
+        <div data-aos="fade-up" class="max-w-6xl w-full">
             <div class="mb-6 inline-block px-4 py-1 border border-cyan-500 text-cyan-500 text-[10px] tracking-[0.4em] uppercase font-bold bg-cyan-500/10">
                 CMAPS | INTELIGENCIA TERRITORIAL APLICADA
             </div>
-            <h1 class="text-4xl md:text-7xl font-bold mb-6 text-gradient uppercase">
+            <h1 class="text-3xl md:text-7xl font-bold mb-6 text-gradient uppercase break-words">
                 Decodificamos el territorio <br>
-                <span class="text-2xl md:text-4xl font-light italic text-white">NOSOTROS LO MEDIMOS</span>
+                <span class="text-xl md:text-4xl font-light italic text-white">NOSOTROS LO MEDIMOS</span>
             </h1>
-            <p class="text-xl text-slate-400 mb-10 max-w-4xl mx-auto font-light">
-    El <strong>ÍNDICE IRSO</strong> <strong>transforma riesgos sociales, criminales y políticos</strong> en una métrica clara para proteger <strong>operaciones</strong>, <strong>inversiones</strong> y <strong>personas</strong>.
-</p>            
+            <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-4xl mx-auto font-light">
+                El <strong>ÍNDICE IRSO</strong> <strong>transforma riesgos sociales, criminales y políticos</strong> en una métrica clara para proteger <strong>operaciones</strong>, <strong>inversiones</strong> y <strong>personas</strong>.
+            </p>            
             <div class="border-l-4 border-red-600 pl-6 text-left inline-block">
-                <span class="block text-4xl font-bold text-red-500">CMAPS</span>
+                <span class="block text-3xl md:text-4xl font-bold text-red-500">CMAPS</span>
                 <span class="text-[10px] uppercase tracking-widest text-white font-bold">METODOLOGÍA PROPIETARIA VERIFICABLE</span>
             </div>
         </div>
@@ -82,20 +81,20 @@
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div data-aos="fade-right">
                 <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em] font-bold">QUÉ ES IRSO</h2>
-                <h3 class="text-3xl font-bold mb-6 uppercase italic">INTELIGENCIA GEOESPACIAL PARA DECISIONES CRÍTICAS</h3>
+                <h3 class="text-2xl md:text-3xl font-bold mb-6 uppercase italic">INTELIGENCIA GEOESPACIAL PARA DECISIONES CRÍTICAS</h3>
                 <p class="text-slate-300 text-justify mb-8">
-                IRSO no es un mapa, ni un dashboard. Es un índice sintético de <strong>interrupción operativa</strong> que anticipa dónde el territorio puede romper una operación antes de que ocurra.
-            </p>
+                    IRSO no es un mapa, ni un dashboard. Es un índice sintético de <strong>interrupción operativa</strong> que anticipa dónde el territorio puede romper una operación antes de que ocurra.
+                </p>
                 <div class="space-y-4">
                     <div class="feature-block p-4 rounded-r-lg">
                         <h4 class="text-white font-bold text-sm uppercase italic">Riesgo Social</h4>
                         <p class="text-small-fix text-slate-400">Cohesión, tensión, movilización y control territorial.</p>
                     </div>
-                    <div class="feature-block p-4 rounded-r-lg border-emerald-500" style="border-left-color: #10b981;">
+                    <div class="feature-block p-4 rounded-r-lg" style="border-left-color: #10b981;">
                         <h4 class="text-white font-bold text-sm uppercase italic">Riesgo Territorial</h4>
                         <p class="text-small-fix text-slate-400">Vulnerabilidad física, accesibilidad y entorno.</p>
                     </div>
-                    <div class="feature-block p-4 rounded-r-lg border-red-500" style="border-left-color: #ef4444;">
+                    <div class="feature-block p-4 rounded-r-lg" style="border-left-color: #ef4444;">
                         <h4 class="text-white font-bold text-sm uppercase italic">Riesgo Operativo</h4>
                         <p class="text-small-fix text-slate-400">Impacto directo en activos, personal y continuidad.</p>
                     </div>
@@ -103,12 +102,12 @@
             </div>
             
             <div data-aos="fade-left" class="flex flex-col justify-center">
-                <div class="formula-box p-12 rounded-3xl text-center shadow-2xl">
+                <div class="formula-box p-8 md:p-12 rounded-3xl text-center shadow-2xl">
                     <h4 class="text-cyan-500 text-xs uppercase mb-8 tracking-widest font-bold">MODELO ANALÍTICO</h4>
-                    <div class="text-4xl md:text-4xl font-bold tracking-tighter mb-4 italic">
+                    <div class="text-2xl md:text-4xl font-bold tracking-tighter mb-4 italic break-words">
                         <strong>ÍNDICE IRSO</strong> = <span class="text-white"> (A × V) </span> / <span class="text-cyan-400">R</span>
                     </div>
-                    <p class="text-slate-500 text-[10px] uppercase font-bold tracking-[0.3em]">Amenaza × Vulnerabilidad / Resiliencia</p>
+                    <p class="text-slate-500 text-[9px] md:text-[10px] uppercase font-bold tracking-[0.2em] md:tracking-[0.3em]">Amenaza × Vulnerabilidad / Resiliencia</p>
                 </div>
                 <p class="mt-8 text-center text-slate-400 italic text-sm">
                     Metodología documentada y replicable.
@@ -119,9 +118,9 @@
 
     <section class="py-24 bg-[#080a0f] border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6">
-            <h3 class="text-center text-4xl font-bold mb-20 uppercase italic text-gradient">Dimensiones del Análisis Cmaps</h3>
+            <h3 class="text-center text-3xl md:text-4xl font-bold mb-20 uppercase italic text-gradient">Dimensiones del Análisis Cmaps</h3>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="dimension-card p-10 rounded-2xl shadow-xl" data-aos="fade-up">
+                <div class="dimension-card p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up">
                     <h4 class="text-cyan-500 font-bold text-sm uppercase mb-6">A. Dimensión Socio Demográfica <br><span class="text-white font-light">(Nivel Manzana)</span></h4>
                     <ul class="space-y-4 text-slate-400 text-sm">
                         <li><strong class="text-white uppercase block">Zonas de Riesgo:</strong> Viviendas deshabitadas que elevan el riesgo de vandalismo.</li>
@@ -129,7 +128,7 @@
                         <li><strong class="text-white uppercase block">Brecha de Infraestructura:</strong> Precariedad en servicios como predictor de fallas técnicas.</li>
                     </ul>
                 </div>
-                <div class="dimension-card p-10 rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="100">
+                <div class="dimension-card p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="100">
                     <h4 class="text-cyan-500 font-bold text-sm uppercase mb-6">B. Dimensión Incidencia Criminal <br><span class="text-white font-light">(Factor Multiplicador)</span></h4>
                     <ul class="space-y-4 text-slate-400 text-sm">
                         <li><strong class="text-white uppercase block">Delitos Alto Impacto:</strong> Determinan el Blindaje necesario para el personal de campo.</li>
@@ -137,7 +136,7 @@
                         <li><strong class="text-white uppercase block">Normalización:</strong> Tasas por cada 100k habitantes para comparativas justas.</li>
                     </ul>
                 </div>
-                <div class="dimension-card p-10 rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
+                <div class="dimension-card p-8 md:p-10 rounded-2xl shadow-xl" data-aos="fade-up" data-aos-delay="200">
                     <h4 class="text-cyan-500 font-bold text-sm uppercase mb-6">C. Dimensión Política <br><span class="text-white font-light">(Termómetro de Gobernabilidad)</span></h4>
                     <ul class="space-y-4 text-slate-400 text-sm">
                         <li><strong class="text-white uppercase block">Abstencionismo Crítico:</strong> Correlación con la ruptura del tejido social o control fáctico.</li>
@@ -152,35 +151,43 @@
     <section class="max-w-7xl mx-auto px-6 py-24">
         <div class="text-center mb-20">
             <h2 class="text-cyan-400 text-xs mb-4 uppercase tracking-[0.5em] font-bold">Arquitectura de Datos</h2>
-            <h3 class="text-4xl font-bold mb-6 uppercase italic">Los 3 Niveles de Precisión</h3>
+            <h3 class="text-3xl md:text-4xl font-bold mb-6 uppercase italic">Los 3 Niveles de Precisión</h3>
         </div>
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-right">
             <div>
-                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Municipio</h4>
+                <h4 class="text-xl md:text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Municipio</h4>
                 <p class="text-slate-400 text-justify italic">Identificación de tendencias regionales. Operando en CDMX y EDOMEX con arquitectura lista para replicarse nacionalmente.</p>
             </div>
-            <img src="irso-municipal-tendencia.jpg" class="rounded-lg border-glow w-full shadow-2xl" alt="Visión Macro">
+            <div class="rounded-lg border-glow overflow-hidden shadow-2xl">
+                <img src="irso-municipal-tendencia.jpg" class="w-full h-auto" alt="Visión Macro">
+            </div>
         </div>
         <div class="grid md:grid-cols-2 gap-16 items-center mb-32" data-aos="fade-left">
-            <div class="order-2 md:order-1"><img src="irso-seccional-joya.jpg" class="rounded-lg border-glow w-full shadow-2xl" alt="Visión Operativa"></div>
+            <div class="order-2 md:order-1">
+                <div class="rounded-lg border-glow overflow-hidden shadow-2xl">
+                    <img src="irso-seccional-joya.jpg" class="w-full h-auto" alt="Visión Operativa">
+                </div>
+            </div>
             <div class="order-1 md:order-2">
-                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Sección</h4>
+                <h4 class="text-xl md:text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Sección</h4>
                 <p class="text-slate-400 text-justify italic">El mapa de batalla. Permite asignar brigadas y recursos en las áreas de mayor impacto electoral y social.</p>
             </div>
         </div>
         <div class="grid md:grid-cols-2 gap-16 items-center" data-aos="fade-right">
             <div>
-                <h4 class="text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Manzana</h4>
+                <h4 class="text-xl md:text-2xl font-bold mb-4 uppercase text-white italic"><strong>ÍNDICE IRSO</strong> por Manzana</h4>
                 <p class="text-slate-400 text-justify italic">Inteligencia de precisión quirúrgica. Detectamos el riesgo calle por calle para una operación segura al 100%.</p>
             </div>
-            <img src="irso-manzana-micro.jpg" class="rounded-lg border-glow w-full shadow-2xl" alt="Visión Quirúrgica">
+            <div class="rounded-lg border-glow overflow-hidden shadow-2xl">
+                <img src="irso-manzana-micro.jpg" class="w-full h-auto" alt="Visión Quirúrgica">
+            </div>
         </div>
     </section>
 
     <section class="py-24 bg-[#080a0f] border-y border-white/5">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h3 class="text-4xl font-bold uppercase italic mb-16 text-gradient">¿Para quién es CMAPS?</h3>
-            <div class="grid md:grid-cols-3 gap-8">
+            <h3 class="text-3xl md:text-4xl font-bold uppercase italic mb-16 text-gradient">¿Para quién es CMAPS?</h3>
+            <div class="grid md:grid-cols-3 gap-8 text-left md:text-center">
                 <div class="feature-card p-10 rounded-r-3xl">
                     <span class="strip bg-cyan-400"></span>
                     <h4 class="text-xl font-bold uppercase italic mb-4 text-white">Corporativos</h4>
@@ -200,15 +207,17 @@
         </div>
     </section>
 
-    <section class="py-24 text-center px-6">
-        <div class="max-w-4xl mx-auto border-glow p-14 rounded-3xl bg-cyan-900/10" data-aos="zoom-in">
-            <h3 class="text-3xl font-bold uppercase italic mb-6 text-gradient">Briefing confidencial</h3>
+    <section class="py-24 text-center px-4 md:px-6">
+        <div class="max-w-4xl mx-auto border-glow p-8 md:p-14 rounded-3xl bg-cyan-900/10" data-aos="zoom-in">
+            <h3 class="text-2xl md:text-3xl font-bold uppercase italic mb-6 text-gradient">Briefing confidencial</h3>
             <p class="text-slate-300 mb-8 italic">No vendemos mapas. Presentamos escenarios de riesgo real para decisiones que no admiten error.</p>
-            <p class="text-cyan-400 text-2xl md:text-4xl font-extrabold tracking-tight hover:text-white transition cursor-pointer">politeiacmaps@gmail.com</p>
+            <p class="text-cyan-400 text-lg sm:text-xl md:text-4xl font-extrabold tracking-tight hover:text-white transition cursor-pointer break-all">
+                politeiacmaps@gmail.com
+            </p>
         </div>
     </section>
 
-    <footer class="py-16 text-center text-[10px] tracking-widest uppercase text-slate-500">
+    <footer class="py-16 text-center text-[10px] px-6 tracking-widest uppercase text-slate-500">
         CMAPS · Inteligencia Territorial · Metodología Propietaria
     </footer>
 
@@ -216,4 +225,3 @@
     <script>AOS.init({duration:1000,once:true});</script>
 </body>
 </html>
-
